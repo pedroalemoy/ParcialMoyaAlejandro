@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block page_content %}
+<h1 style ="text-align: center;",>Listado de Clientes de la empresa</h1>
+<div> 
+    <div class="container-fluid">
+        <table class="table table-bordered table-condensed" >
+            <tbody>
+                {% for linea in  clie %}
+                    <tr class="active">                
+                        {% for item in  linea %}
+                        <td  style="background-color: rgb(151, 252, 252);">{{item}}</td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}
